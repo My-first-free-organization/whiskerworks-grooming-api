@@ -9,7 +9,7 @@ export interface ScratchingPostRequest {
 
 export class ScratchingPostService {
   private readonly log = new Logger('scratching-post');
-  private readonly maxRetries = 3;
+  private readonly maxRetries = 5;
 
   async handle(req: ScratchingPostRequest): Promise<boolean> {
     if (!req.sku || req.quantity <= 0) {
